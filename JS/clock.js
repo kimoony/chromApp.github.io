@@ -4,8 +4,8 @@ const clock = document.querySelector("h2#clock");
 //   console.log('hello');
 // }
 
-// setInterval(sayHello, 5000)  // (func, 반복되는 시간(ms))
-// setTimeout(sayHello, 5000) // (func, 기다릴 시간(ms))
+// setInterval(sayHello, 2000)  // (func, 반복되는 시간(ms))
+// setTimeout(sayHello, 3000) // (func, 기다릴 시간(ms))
 
 
 function getClock() {
