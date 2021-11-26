@@ -231,16 +231,16 @@
 // const h1 = document.querySelector("div.hello:first-child h1")
 
 // function handleTitleClick() {
-//   // const clickedClass = "clicked";
-//   // if (h1.classList.contains(clickedClass)) {
-//   //   // className 는 과거의 것을 생각하지 않고 바꿔버림
-//   //   // classList.contains 는 기존의 클래스이름을 그대로 둠
-//   //   h1.classList.remove(clickedClass) = "";
-//   //   // classList.contains 는 기존의 클래스이름을 그대로 두고 clicked 만 제거한다.
-//   // } else {
-//   //   h1.classList.add(clickedClass)
-//   //   // classList.contains 는 기존의 클래스이름을 그대로 두고 clicked 만 추가한다.
-//   // }
+//   const clickedClass = "clicked";
+//   if (h1.classList.contains(clickedClass)) {
+//     // className 는 과거의 것을 생각하지 않고 바꿔버림
+//     // classList.contains 는 기존의 클래스이름을 그대로 둠
+//     h1.classList.remove(clickedClass) = "";
+//     // classList.contains 는 기존의 클래스이름을 그대로 두고 clicked 만 제거한다.
+//   } else {
+//     h1.classList.add(clickedClass)
+//     // classList.contains 는 기존의 클래스이름을 그대로 두고 clicked 만 추가한다.
+//   }
 //   h1.classList.toggle("clicked")
 // }
 

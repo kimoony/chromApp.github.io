@@ -1,6 +1,8 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
-const greeting = document.querySelector('#greeting')
+const logoutForm = document.querySelector('#logout-form');
+const greeting = document.querySelector('#greeting');
+const logoutBtn = document.querySelector('#logout-form input');
 
 
 // 이렇게 반복되는 String 을 대문자 변수로 저정해 놓으면 실수가 줄고 
@@ -24,9 +26,28 @@ function handleLoginSubmit(e) {
 
 function paintGreetings(username) {
   // #greeting에 `Hello ${username}`의 내용을 넣어준다.
-  greeting.innerText = `Hello ${username}`; // 백틱(``)으로 하면 편해요!
-  // #greeting에 className hidden 을 제거한다.
+  greeting.innerText = `오늘도 화이팅! ${username}`; // 백틱(``)으로 하면 편해요!
+  // #logout-form, #greeting, #logout-form input에 className hidden 을 제거한다.
+  logoutForm.classList.remove(HIDDEN_CLASSNAME);
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  logoutBtn.classList.remove(HIDDEN_CLASSNAME);
+  // #login-form, ##login-form input에 className hidden 을 추가한다.
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  loginInput.classList.add(HIDDEN_CLASSNAME);
+
+}
+
+function handleLogout(username) {
+  // 로컬스토리지(브라우저)에 값을 삭제한다.
+  localStorage.removeItem(username);
+  // #logout-form, #greeting, #logout-form input에 className hidden 을 추가한다.
+  greeting.remove();
+  logoutBtn.remove();
+  // greeting.classList.add(HIDDEN_CLASSNAME);
+  // logoutBtn.classList.add(HIDDEN_CLASSNAME);
+  // #login-form, ##login-form input에 className hidden 을 제거한다.
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginInput.classList.remove(HIDDEN_CLASSNAME);
 }
 
 // savedUsername 변수에 username 저장된 정보를 가져온다.
@@ -37,8 +58,10 @@ if (savedUsername === null) {
   // show the form
   // loginform에 hidden 을 제거한다.
   loginForm.classList.remove(HIDDEN_CLASSNAME);
+  logoutForm.classList.add(HIDDEN_CLASSNAME);
   // loginform에 이번트리스너로 submit
   loginForm.addEventListener('submit', handleLoginSubmit);
+  logoutForm.addEventListener('submit', handleLogout);
 } else { // null이 아니면 paintGreetings 함수가 실행된다.
   // show the greeting
   paintGreetings(savedUsername);
