@@ -1,5 +1,6 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
+const loginBtn = document.querySelector('#login-btn');
 const logoutForm = document.querySelector('#logout-form');
 const greeting = document.querySelector('#greeting');
 const logoutBtn = document.querySelector('#logout-form input');
@@ -34,20 +35,21 @@ function paintGreetings(username) {
   // #login-form, ##login-form input에 className hidden 을 추가한다.
   loginForm.classList.add(HIDDEN_CLASSNAME);
   loginInput.classList.add(HIDDEN_CLASSNAME);
-
+  loginBtn.classList.add(HIDDEN_CLASSNAME);
 }
 
-function handleLogout(username) {
+function handleLogout(e) {
+  e.preventDefault();
   // 로컬스토리지(브라우저)에 값을 삭제한다.
-  localStorage.removeItem(username);
-  // #logout-form, #greeting, #logout-form input에 className hidden 을 추가한다.
-  greeting.remove();
-  logoutBtn.remove();
-  // greeting.classList.add(HIDDEN_CLASSNAME);
-  // logoutBtn.classList.add(HIDDEN_CLASSNAME);
-  // #login-form, ##login-form input에 className hidden 을 제거한다.
+  localStorage.removeItem(USERNAME_KEY);
+  // // #logout-form, #greeting, #logout-form input에 className hidden 을 추가한다.
+  logoutForm.classList.add(HIDDEN_CLASSNAME);
+  greeting.classList.add(HIDDEN_CLASSNAME);
+  logoutBtn.classList.add(HIDDEN_CLASSNAME);
+  // // #login-form, ##login-form input에 className hidden 을 제거한다.
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginInput.classList.remove(HIDDEN_CLASSNAME);
+  loginBtn.classList.remove(HIDDEN_CLASSNAME);
 }
 
 // savedUsername 변수에 username 저장된 정보를 가져온다.
@@ -58,11 +60,10 @@ if (savedUsername === null) {
   // show the form
   // loginform에 hidden 을 제거한다.
   loginForm.classList.remove(HIDDEN_CLASSNAME);
-  logoutForm.classList.add(HIDDEN_CLASSNAME);
   // loginform에 이번트리스너로 submit
   loginForm.addEventListener('submit', handleLoginSubmit);
-  logoutForm.addEventListener('submit', handleLogout);
 } else { // null이 아니면 paintGreetings 함수가 실행된다.
   // show the greeting
   paintGreetings(savedUsername);
 }
+logoutForm.addEventListener('submit', handleLogout);
