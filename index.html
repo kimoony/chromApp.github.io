@@ -9,33 +9,44 @@
   <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-  <h2 id="clock">00:00</h2>
-  <form id="login-form" class="hidden">
-    <input 
-      required 
-      maxlength="15" 
-      type="text" 
-      placeholder="What is your name?" 
-    />
-    <input id="login-btn" type="submit" value="로그인"/>
-  </form>
-  <form id="logout-form" class="hidden">
-    <h1 id="greeting" class="hidden"></h1>
-    <input 
-      type="submit" 
-      value="로그아웃" 
-      class="hidden" 
-    />
-  </form>
-  <form id="todo-form">
-    <input type="text" placeholder="Write a To Do and Press Enter" required />
-  </form> 
-  <ul id="todo-list"></ul>
-  <div id="quote">
-    <span></span>
-    <span></span>
+  <div id="container">
+    <div id="left-container">
+      <div id="weather">
+        <span></span>
+        <img/>
+        <span></span>
+      </div>
+      <h2 id="clock">00:00</h2>
+      <form id="login-form" class="hidden">
+        <input 
+        required 
+        maxlength="15" 
+        type="text" 
+        placeholder="이름을 입력하세요!" 
+        />
+        <input id="login-btn" type="submit" value="로그인"/>
+      </form>
+      <form id="logout-form" class="hidden">
+        <h1 id="greeting" class="hidden"></h1>
+        <input 
+        type="submit" 
+        value="로그아웃" 
+        class="hidden" 
+        />
+      </form>
+    </div>
+    <div id="right-container" class="hidden">
+      <form id="todo-form">
+        <h2 id="todo-title">To Do List</h2>
+        <div class="todo-input">
+          <input type="text" placeholder="To Do 입력하기!!" required />
+          <input type="submit" value="등록"/>
+        </div>
+        <ul id="todo-list"></ul>
+      </form> 
+    </div>
   </div>
-  <div id="weather">
+  <div id="quote">
     <span></span>
     <span></span>
   </div>

@@ -1,0 +1,13 @@
+#weather {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#weather span {
+  font-size: 25px;
+}
+
+#weather img {
+  height: 50px;
+}

@@ -1,14 +1,12 @@
 const images = [
-  "01.jpg",
+  "01.jpeg",
   "02.jpeg",
-  "03.jpeg",
+  "03.jpg",
   "04.jpg",
   "05.jpg",
   "06.jpg",
   "07.jpg",
   "08.jpg",
-  "09.jpg",
-  "10.jpg",
 ];
 
 // const bgImage = document.createElement("img");

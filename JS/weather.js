@@ -1,5 +1,6 @@
-const weather = document.querySelector('#weather span:first-child');
-const city = document.querySelector('#weather span:last-child');
+const city = document.querySelector('#weather span:nth-child(1)');
+const img = document.querySelector('#weather img');
+const weather = document.querySelector('#weather span:nth-child(3)');
 const API_KEY = '8b4400e8424eb03dac3f2ff4dc6ae6e1'
 
 function onGeoOk(position) {
@@ -13,8 +14,9 @@ function onGeoOk(position) {
     .then(data => {
       city.innerText = data.name
       weather.innerText = `${data.weather[0].main} / ${data.main.temp}`
+      img.textContent = '';
+      img.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
     })
-
 }
 function onGeoErr() {
   alert("Can't find you. No weather for you")
