@@ -32,7 +32,7 @@ function handleLoginSubmit(e) {
 
 function paintGreetings(username) {
   // #greeting에 `Hello ${username}`의 내용을 넣어준다.
-  greeting.innerText = `${username}, 오늘도 화이팅!`; // 백틱(``)으로 하면 편해요!
+  greeting.innerText = `${username}님, 오늘도 화이팅!`; // 백틱(``)으로 하면 편해요!
   // #logout-form, #greeting, #logout-form input에 className hidden 을 제거한다.
   logoutForm.classList.remove(HIDDEN_CLASSNAME);
   greeting.classList.remove(HIDDEN_CLASSNAME);

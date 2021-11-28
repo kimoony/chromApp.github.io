@@ -45,10 +45,10 @@ body {
 
 #right-container {
   width: 80%;
-  background-color: #fff;
+  background-color: whitesmoke;
   border-radius: 10px;
   padding: 10px;
-  opacity: .8;
+  opacity: .7;
 }
 
 .hidden {
