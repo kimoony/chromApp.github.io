@@ -9,6 +9,7 @@
 #login-form input:first-child {
   border: none;
   border-bottom: 1px solid #4FA4F7;
+  color: #fff;
   background-color: rgba(255, 255, 255, 0);
   color: #fff;
   font-size: 18px;
