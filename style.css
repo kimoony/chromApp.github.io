@@ -1,0 +1,68 @@
+@import './CSS/reset.css';
+@import './CSS/background.css';
+@import './CSS/clock.css';
+@import './CSS/greetings.css';
+@import './CSS/quotes.css';
+@import './CSS/todo.css';
+@import './CSS/weather.css';
+@import './CSS/login.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Hi Melody', cursive;
+}
+
+#container {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#left-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#right-container {
+  width: 80%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  opacity: .7;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 850px) { 
+  #container { 
+    flex-wrap: column; 
+    flex-direction: column;
+  }
+  #left-container {
+    margin-bottom: 20px;
+  }
+}
+
+
