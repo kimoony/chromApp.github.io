@@ -1,11 +1,11 @@
-@import '<%= BASE_URL %>CSS/reset.css';
-@import '<%= BASE_URL %>CSS/background.css';
-@import '<%= BASE_URL %>CSS/clock.css';
-@import '<%= BASE_URL %>CSS/greetings.css';
-@import '<%= BASE_URL %>CSS/quotes.css';
-@import '<%= BASE_URL %>CSS/todo.css';
-@import '<%= BASE_URL %>CSS/weather.css';
-@import '<%= BASE_URL %>CSS/login.css';
+@import './CSS/reset.css';
+@import './CSS/background.css';
+@import './CSS/clock.css';
+@import './CSS/greetings.css';
+@import './CSS/quotes.css';
+@import './CSS/todo.css';
+@import './CSS/weather.css';
+@import './CSS/login.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
 
