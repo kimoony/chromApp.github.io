@@ -1,3 +1,3 @@
 # chromeApp
-vanilla JS chrome app make 
+vanilla JS chrome app 
 (Nomade Cordersm vanilla JS Challenge)
